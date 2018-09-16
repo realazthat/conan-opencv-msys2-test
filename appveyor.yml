@@ -19,4 +19,4 @@ install:
   - conan remote add camposs "https://conan.campar.in.tum.de/api/conan/conan-camposs"
 test_script:
   - mkdir .build && cd .build
-  - conan install .. --build missing -s compiler=gcc -s compiler.libcxx=libstdc++11
+  - conan install .. --build missing -s compiler=gcc -s compiler.version=7.3 -s compiler.libcxx=libstdc++11
