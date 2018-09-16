@@ -1,3 +1,4 @@
+build: off
 platform: x64
 
 environment:
