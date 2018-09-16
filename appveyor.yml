@@ -10,9 +10,12 @@ environment:
       MINGW_PREFIX: /mingw64
       MINGW_CHOST: x86_64-w64-mingw32
       MSYS2_ARCH: x86_64
+      MSYS2_DIR: msys64
+      MSYSTEM: MINGW64
       CC: gcc
       CXX: g++
 install:
+  - set "PATH=C:\%MSYS2_DIR%\%MSYSTEM%\bin;C:\%MSYS2_DIR%\usr\bin;%PATH%"
   - set PATH=%PATH%;%PYTHON%/Scripts/
   - pip.exe install conan_package_tools # It install conan too
   - conan user # It creates the conan data directory
